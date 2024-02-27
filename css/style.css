@@ -4316,8 +4316,9 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 400px;
+  width: 250px;
   height: 200px;
+
 }
 
 /* line 449, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_elements.scss */
