@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:200,200i,300,300i,400,500,600,700,800,900&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:200,200i,300,300i,400,500,600,700,800,900&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Abril+Fatface|Poppins:200,200i,300,300i,400,500,600,700,800,900&display=swap"); */
 /* line 1, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_extend.scss */
 .flex-center-start {
   display: -webkit-box;
@@ -13,17 +13,18 @@
   justify-content: start;
 }
 
-/* Normal desktop :1200px. */
+/* Normal desktop :1200px. */ */
 /* Normal desktop :992px. */
 /* Tablet desktop :768px. */
 /* small mobile :320px. */
 /* Large Mobile :480px. */
-/* 1. Theme default css */
+/* 1. Theme default css
 /* line 5, ../../Arafath/CL/january 2020/243.Education/HTML/scss/theme-default.scss */
 body {
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
+  width: clamp(1200px, 10vm, 320px);
 }
 
 /* line 12, ../../Arafath/CL/january 2020/243.Education/HTML/scss/theme-default.scss */
@@ -2249,7 +2250,7 @@ h3 {
 }
 
 /* line 10, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_footer.scss */
-.footer .footer_top {
+.footer  {
   padding-top: 30px;
   padding-bottom: -40px;
 }
@@ -2765,7 +2766,7 @@ h3 {
 /* line 4, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_service.scss */
 .service_area .single_service {
   background: #181a7d;
-  -webkit-border-radius: 10px;
+  -webkit-border-radius: 10px;  
   -moz-border-radius: 10px;
   border-radius: 10px;
   padding: 27.5px 30px;
@@ -6957,36 +6958,38 @@ containera {
 }
 
 /* Основные стили для контейнера */
+/* Основные стили для контейнера */
 .content1 {
   display: flex;
-  flex-wrap: wrap; /* Разрешить перенос элементов на новую строку, если не помещаются на текущей */
-  justify-content: space-between; /* Выравнивание по горизонтали с расстоянием между элементами */
-  align-items: center; /* Выравнивание по вертикали */
+  justify-content: space-between; /* Распределить элементы по краям контейнера */
+  align-items: center; /* Выровнять элементы по вертикали */
 }
 
 /* Стили для изображения */
 .photo {
-  flex: 1; /* Изображение занимает все доступное пространство */
-  margin-right: 20px; /* Добавляем небольшой отступ справа */
-  max-width: 100%; /* Гарантируем, что изображение не будет шире, чем его контейнер */
+  width: 100%; /* Ширина изображения на компьютерах */
+  order: 1; /* Порядок элемента при отображении на компьютерах */
 }
 
 /* Стили для текста */
 .text {
-  flex: 1; /* Текст занимает все доступное пространство */
+  width: 50%; /* Ширина текста на компьютерах */
+  order: 2; /* Порядок элемента при отображении на компьютерах */
 }
 
-/* Медиа-запрос для адаптивности */
+/* Медиа-запрос для адаптации на мобильных устройствах */
 @media (max-width: 768px) {
   .content1 {
-    flex-direction: column; /* Столбцовая ориентация для мобильных устройств */
+    flex-direction: column; /* Переключить на столбцовую ориентацию на мобильных устройствах */
+    align-items: flex-start; /* Выровнять элементы по левому краю */
   }
-  
-  .photo {
-    flex: none; /* Отменить установку flex для изображения */
-    margin-right: 0; /* Убрать правый отступ */
+
+  .photo, .text {
+    width: 100%; /* Изображение и текст будут занимать всю ширину контейнера на мобильных устройствах */
+    order: 0; /* Порядок элемента при отображении на мобильных устройствах */
   }
 }
+
 
 
 .text h2 {
