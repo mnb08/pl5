@@ -6814,22 +6814,60 @@ table {
   background-color: rgb(18, 18, 74); /* Цвет фона таблицы */
   color: white; /* Цвет текста в таблице */
 }
-
-table,
-th,
-td {
-  border: 1px solid white; /* Белые границы для ячеек и заголовков */
-  padding: 8px;
+@media screen and (max-width: 600px) {
+  table {
+    overflow-x: auto;
+  }
 }
 
-tr:hover {
-  background-color: #1c48b7;
-  color: white;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgb(18, 18, 74); /* Цвет фона таблицы */
+  color: white; /* Цвет текста в таблице */
+  overflow-x: auto; /* Разрешить горизонтальную прокрутку */
 }
 
-th {
-  text-align: left;
+/* Стили для ячеек таблицы */
+table th,
+table td {
+  padding: 8px; /* Подходящий внутренний отступ для содержимого ячеек */
+  border: 1px solid white; /* Границы ячеек */
 }
+
+/* Медиа-запрос для таблицы на маленьких экранах */
+@media screen and (max-width: 600px) {
+  table {
+    overflow-x: auto;
+    display: block; /* Позволить таблице принимать ширину родительского контейнера */
+  }
+
+  /* Скрыть заголовки столбцов на маленьких экранах */
+  table thead {
+    display: none;
+  }
+
+  /* Для каждой строки таблицы, задаем стиль */
+  table tr {
+    margin-bottom: 10px; /* Дополнительный отступ между строками */
+    display: block; /* Позволить строкам принимать ширину родительского контейнера */
+    border: 1px solid white; /* Границы строк */
+  }
+
+  /* Стили для ячеек в строках таблицы */
+  table td {
+    display: block; /* Позволить ячейкам принимать ширину родительского контейнера */
+    text-align: left; /* Выравнивание текста по левому краю */
+    border: none; /* Убираем границы у ячеек */
+    border-bottom: 1px solid white; /* Граница только снизу */
+  }
+
+  /* Скрыть последний элемент строки таблицы на маленьких экранах */
+  table td:last-child {
+    border-bottom: none;
+  }
+}
+
 
 containera {
   max-width: 800px;
