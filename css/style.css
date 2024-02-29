@@ -21,6 +21,7 @@
 /* 1. Theme default css
 /* line 5, ../../Arafath/CL/january 2020/243.Education/HTML/scss/theme-default.scss */
 body {
+  margin: 0;
   font-family: "Poppins", sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -3653,7 +3654,7 @@ h3 {
 
 /* line 24, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_contact.scss */
 .contact-info .media-body h3 {
-  width: 330px;
+  width: clamp(200px, 90%, 300px);
   font-size: 16px;
   margin-bottom: 0;
   margin-top: 5px;
