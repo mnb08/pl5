@@ -2824,12 +2824,12 @@ h3 {
 }
 
 .budni {
-    font-size: 55px;
-    font-weight: 400;
-    font-family: "Abril Fatface", cursive;
-    color: #234262;
-    text-align: center;
-  /* margin-bottom: 40px; */
+  font-size: clamp(30px, 8vw, 55px); /* Используем clamp() для адаптивного размера */
+  font-weight: 400;
+  font-family: "Abril Fatface", cursive;
+  color: #234262;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 /* line 46, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_service.scss */
