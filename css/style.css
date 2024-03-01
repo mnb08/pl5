@@ -2633,9 +2633,10 @@ h3 {
 
 /* line 9, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_program.scss */
 .popular_program_area .single__program .program_thumb img {
-  width: 300px;
-  height: 200px;
+  width: clamp(272px, 50%, 300px); /* Adjust the min, preferred, and max width as needed */
+  height: 200px; /* You can keep the height fixed */
 }
+
 
 /* line 13, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_program.scss */
 .popular_program_area .single__program .program__content {
